@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="css/slides-extended.css" />
+    <link rel="stylesheet" href="assets/css/mir-simple.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+    <link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+    <script type="text/javascript">
+        function pageInIframe() {
+            return (window.location !== window.parent.location);
+        }
+
+        let forgetPop = true;
+        function onPopState(event) {
+            if(forgetPop){
+                forgetPop = false;
+            } else if( pageInIframe()) {
+                parent.postMessage(event.target.location.href, "app://obsidian.md");
+            }
+        }
+        window.onpopstate = onPopState;
+        window.onmessage = event => {
+            if(event.data == "reload"){
+                window.document.location.reload();
+            }
+            forgetPop = true;
+        }
+
+        function fitElements() {
+            const itemsToFit = document.getElementsByClassName('fitText');
+            for (const item in itemsToFit) {
+                if (Object.hasOwnProperty.call(itemsToFit, item)) {
+                    const element = itemsToFit[item];
+                    fitElement(element, 1, 1000);
+                    element.classList.remove('fitText');
+                }
+            }
+        }
+
+        function fitElement(element, start, end) {
+
+            let size = (end + start) / 2;
+            element.style.fontSize = `${size}px`;
+
+            if (Math.abs(start - end) < 1) {
+                while (element.scrollHeight > element.offsetHeight) {
+                    size--;
+                    element.style.fontSize = `${size}px`;
+                }
+                return;
+            }
+
+            if (element.scrollHeight > element.offsetHeight) {
+                fitElement(element, start, size);
+            } else {
+                fitElement(element, size, end);
+            }
+        }
+
+        document.onreadystatechange = () => {
+            fitElements();
+            if (document.readyState === 'complete') {
+                if (pageInIframe() && window.location.href.indexOf("?export") != -1){
+                    parent.postMessage(event.target.location.href, "app://obsidian.md");
+                }
+                if (window.location.href.indexOf("print-pdf") != -1){
+                    let stateCheck = setInterval(() => {
+                        clearInterval(stateCheck);
+                        window.print();
+                    }, 250);
+                }
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides"><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Session 4 
+### Reading the Old Testament 
+### Thinking about the Psalms
+
+
+Anyone have a favourite psalm?
+</div>
+
+<aside class="notes"><p>Psalm 131</p>
+<p><strong>This half: OT in general, Psalms as poetry.</strong></p>
+<p>(a few slides on Psalms as Prayer. St Athanasius: “Most of Scripture speaks to us; the Psalms speak for us.”)</p>
+</aside></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Why should Christians read the OT?
+
+What do you make of OT? What did Jesus make of it?
+
+What do people struggle with in the OT?
+
+Does the New Testament replace the Old?
+</div>
+
+<aside class="notes"><ul>
+<li>Disturbing texts, harshness.</li>
+<li>Does NT replace the OT? What is the relationship here?</li>
+<li>Does your church use the OT?</li>
+<li>Andy Stanley megachurch pastor - “leave OT behind”. Doesn’t understand why we need it. Hinders our mission? Marcionism (2nd century AD).</li>
+<li>Jesus came not to provide a brand new revelation, but to seek out and save the lost.</li>
+<li>OT has no deficiency that the NT comes to correct. Goldingay: not new revelation, but a fresh revelation. God taking His activity to its “logical and ultimate extreme”. </li>
+<li>Seeing the cathedral from up close.</li>
+</ul>
+</aside></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## New Testament views of the Old
+> 1 Cor 10:1-5 - read thru
+> 
+> Matt 5:17-20 - read thru
+</div>
+
+<aside class="notes"><ul>
+<li><strong>1 Cor 10:1-5</strong> - Paul sees Christ IN the rock in the wilderness wandering! (read in class?) cf. Ex 7:1-7, Num 20:1-14. Christ was the one who nourished the people in the wilderness, and will nourish the Corinthians in their wilderness too. Christ IN the OT fully, even if not named.</li>
+</ul>
+</aside></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Guides to reading the Old Testament
+- "Bothness"
+- Foundation not scaffolding
+- Don't flatten the Biblical Story
+</div>
+
+<aside class="notes"><ul>
+<li>Rel of OT to NT - “bothness”, NT fulfills OT (<strong>Matt 5:17-20</strong>), OT is foundation (permanent) not scaffolding (temporary, supersessionism).</li>
+<li>We share this Scripture with Jewish people. Suffering servant - pointing to Jesus (giving us words to say when confronted with the Cross) AND the exiled figure in Babylon.</li>
+<li>Don’t flatten the Biblical story. Don&#39;t RUSH to the NT and mute the OT witness.</li>
+</ul>
+</aside></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Reading the Psalms - How are Psalms poetry?
+
+- We think of poetry as optional - but in the ancient world poetry was indispensable for expressing emotion.
+- The Psalms don't rhyme. So what is it that makes them poetry?
+
+> Psalm 1 - Read through
+
+__
+> Psalm 24 - Read through
+</div>
+
+<aside class="notes"><ul>
+<li><strong>Psalm 1</strong> -  rooted tree versus chaff blown about. “The way” at beginning and end.</li>
+<li>Poetry brings into recognition what was latent or forgotten or overlooked</li>
+<li>Poetry is language art</li>
+<li>Rhyme, rhythm, meter. What defines poetry in the psalms?</li>
+<li>Heb free verse, but with parallelism. Line structure. (stych, colon). e.g. Ps 24:1.</li>
+<li>Parallelism, not rhyme</li>
+<li>Scholars now talk about “seconding” - “A, and what’s more, B”. Broadening, specifying, furthering, modifying. (e.g. psalm 1:2)</li>
+</ul>
+</aside></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Parallelism, or "seconding" - "A, and what's more, B"
+- Rich images - rooted tree versus blown chaff
+</div></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Time for break
+
+Take 10 minutes
+</div></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Between Lament and Praise
+
+This half: lamenting, and cursing.
+- Various types of Psalms (Gunkel).
+	- Lament thanksgiving
+	- royal psalms
+	- divine enthronement
+	- wisdom psalms
+	- etc.
+</div>
+
+<aside class="notes"><ul>
+<li><p>Various types of Psalms. Form criticism - Hermann Gunkel. People were trying to reconstruct hist bg of each individual psalm (not possible). Instead looked at genre and Sitz im Leben. Find types with generalizations.</p>
+</li>
+<li><p>Brueggemann has own categories: orientation (orderliness, Ps 1), disorientation (old system has collapsed, Ps 22), new orientation (newness, surprise, gift Ps 18 - thanksgiving for deliverance). B loves applying this pattern to Scripture. Psalms work in season and out of season.</p>
+</li>
+</ul>
+</aside></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Lament structure:
+	- Invocation
+	- Complaint
+	- Petition
+	- Avowal of innocence
+	- Expression of confidence
+	- vow of praise
+	- actual praise
+- Ps 3 ex in Olga's slides
+</div></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Why does it matter that we have lament psalms?
+</div></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Laments generally demand justice rather than plead for mercy
+- Lament psalms useful (Calvin) against “that most baneful infection, hypocrisy”
+- "hanging by a psalm" - psalms of lament help us to navigate challenging times. 
+- Underused in church! (why?) But God wants to hear *all* our emotions.
+- Lament is not whining! Whining does not TRANSFORM us. (people whined in the 40 years in the wilderness). Lament is an art form, and a journey towards God.
+> Psalms 42-43 - read through
+
+> (see also: Psalms 22, 88 (super-gloomy)
+</div></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Cursing Psalms
+
+Cursing psalms 
+> Psalms 58,69,109,137 - read thru. Breakout groups?
+
+ What does the Psalmist want from God? What is the main emotion? What do we learn from them? What would you say to someone in church deeply upset that they're in here?
+</div>
+
+<aside class="notes"><p>(justice, but from God. Cries for attack but without weapons.)</p>
+<ul>
+<li>Poss approaches - condemn them, challenge to identify with victims, spiritualise them (all our enemies are spiritual). Would our view be different if we were oppressed?</li>
+<li>Cries to God to sort out our enemies might trouble us - but the Psalmist isn’t committing violence himself, but asking God to intervene.</li>
+<li>Scholars&#39; views</li>
+</ul>
+</aside></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+Clinton McCann: 
+>In the face of monstrous evil, the worst possible response is to feel nothing
+</div></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+Check out the "Advanced Materials"!
+</div></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Overflow Room
+
+Look at videos for session 4, Activity 2? - Jo Bailey Wells, Walter Brueggemann
+Advanced videos - Joel Baden, Bono
+</div></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/obsidian-markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/math/math.js"></script>
+    <script src="plugin/mermaid/mermaid.js"></script>
+    <script src="plugin/chart/chart.umd.js"></script>
+    <script src="plugin/chart/plugin.js"></script>
+    <script src="plugin/menu/menu.js"></script>
+    <script src="plugin/customcontrols/plugin.js"></script>
+
+
+    <script>
+        function extend() {
+            const target = {};
+            for (let i = 0; i < arguments.length; i++) {
+                const source = arguments[i];
+                for (const key in source) {
+                    if (source.hasOwnProperty(key)) {
+                        target[key] = source[key];
+                    }
+                }
+            }
+            return target;
+        }
+
+        function isLight(color) {
+            // normalize to rgb(a)
+            const optionEl = document.createElement("option");
+            optionEl.style.color = color;
+            const normalizedColor = optionEl.style.color;
+
+            const match = normalizedColor.match(/(\d+), (\d+), (\d+)/);
+            if (!match) return false;
+            const [, c_r, c_g, c_b] = match;
+
+            const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+            return brightness > 155;
+        }
+
+        const bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+
+        if (isLight(bgColor)) {
+            document.body.classList.add('has-light-background');
+        } else {
+            document.body.classList.add('has-dark-background');
+        }
+
+        // default options to init reveal.js
+        const defaultOptions = {
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            transition: 'default', // none/fade/slide/convex/concave/zoom
+            plugins: [
+                ObsidianMarkdown,
+                RevealHighlight,
+                RevealZoom,
+                RevealNotes,
+                RevealMath.KaTeX,
+                RevealMermaid,
+                RevealChart,
+                RevealCustomControls,
+                RevealMenu,
+            ],
+            allottedTime: "120",
+
+            katex: {
+                local: 'plugin/math/katex',
+                extensions: ["mhchem"],
+            },
+            markdown: {
+                gfm: true,
+            },
+            mermaid: {
+                theme: isLight(bgColor) ? 'default' : 'dark',
+            },
+            customcontrols: {
+                controls: [
+                ]
+            },
+            menu: {
+                loadIcons: false
+            },
+        };
+
+        if ( pageInIframe() ) {
+            defaultOptions.scrollActivationWidth = 5;
+        }
+
+        // options from URL query string
+        const queryOptions = Reveal().getQueryHash() || {};
+
+        const options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":false,"center":true,"transition":"slide","transitionSpeed":"default","width":960,"height":700,"margin":0.04}, queryOptions);
+    </script>
+
+    <script>
+      /**
+       * KaTeX Equation Numbering Note
+       *
+       * KaTeX maintains a global equation counter for \begin{equation} environments.
+       * When navigating between slides, reveal.js math plugin may re-render math, causing
+       * equation numbers to change randomly.
+       *
+       * Note: Regular $$ blocks don't have equation numbers - only \begin{equation} does.
+       *
+       * If you experience issues with equation numbers changing:
+       * Use manual \tag{} commands: \begin{equation}\tag{1} ... \end{equation}
+       */
+
+      Reveal.initialize(options);
+    </script>
+    <!-- created with Slides Extended reveal.html template -->
+</body>
+</html>
