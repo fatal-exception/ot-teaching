@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="css/slides-extended.css" />
+    <link rel="stylesheet" href="assets/css/mir-simple.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+    <link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+    <script type="text/javascript">
+        function pageInIframe() {
+            return (window.location !== window.parent.location);
+        }
+
+        let forgetPop = true;
+        function onPopState(event) {
+            if(forgetPop){
+                forgetPop = false;
+            } else if( pageInIframe()) {
+                parent.postMessage(event.target.location.href, "app://obsidian.md");
+            }
+        }
+        window.onpopstate = onPopState;
+        window.onmessage = event => {
+            if(event.data == "reload"){
+                window.document.location.reload();
+            }
+            forgetPop = true;
+        }
+
+        function fitElements() {
+            const itemsToFit = document.getElementsByClassName('fitText');
+            for (const item in itemsToFit) {
+                if (Object.hasOwnProperty.call(itemsToFit, item)) {
+                    const element = itemsToFit[item];
+                    fitElement(element, 1, 1000);
+                    element.classList.remove('fitText');
+                }
+            }
+        }
+
+        function fitElement(element, start, end) {
+
+            let size = (end + start) / 2;
+            element.style.fontSize = `${size}px`;
+
+            if (Math.abs(start - end) < 1) {
+                while (element.scrollHeight > element.offsetHeight) {
+                    size--;
+                    element.style.fontSize = `${size}px`;
+                }
+                return;
+            }
+
+            if (element.scrollHeight > element.offsetHeight) {
+                fitElement(element, start, size);
+            } else {
+                fitElement(element, size, end);
+            }
+        }
+
+        document.onreadystatechange = () => {
+            fitElements();
+            if (document.readyState === 'complete') {
+                if (pageInIframe() && window.location.href.indexOf("?export") != -1){
+                    parent.postMessage(event.target.location.href, "app://obsidian.md");
+                }
+                if (window.location.href.indexOf("print-pdf") != -1){
+                    let stateCheck = setInterval(() => {
+                        clearInterval(stateCheck);
+                        window.print();
+                    }, 250);
+                }
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides"><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Warm-up
+
+<img src="assets/images/nicaragua.jpg" alt="" style="object-fit: scale-down">
+
+**No answers, only questions.**
+</div></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Creation
+- Does Christianity just hate nature?
+- How does the Bible present nature?
+
+> Job 38,41 - read thru
+> 
+> Late Isaiah 65:17- 25 - read thru
+</div>
+
+<aside class="notes"><ul>
+<li>Claim (Lynn White Jr 1967) that Chr encourages abuse of the created world. Pagan groves vs trees-as-just-facts. A false dichotomy - a false choice. Abuse or venerate aren&#39;t only options. Creation isn&#39;t itself divine. There is a middle way. </li>
+<li>Flower vs weed</li>
+<li>Creation not &quot;nature&quot;. Latter term foreign to ANE. Think of end of Job - forces held in check by God.</li>
+<li>Job 38 - <em>decentres</em> humanity from creation. Humans the &quot;glaring omission&quot;.</li>
+<li>(Wisdom literature)</li>
+<li>Job goes <em>beyond</em> stewardship. He owns donkeys, but the wild donkey has nothing to do with his influence. Ellen Davis: Can you love what you do not control?</li>
+</ul>
+</aside></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Two Creation Accounts
+- "J" - Genesis 2:4b-25
+- "P" - Genesis 1:1-2:4a
+
+Alter: "A montage of viewpoints arranged in sequence"
+
+__
+### Features of J
+Topsoil, agrarian. Adam and Adamah
+...
+
+### Features of P
+image of God, dominion, be fruitful and multiply
+...
+</div>
+
+<aside class="notes"><ul>
+<li>P<ul>
+<li>&quot;Made in God&#39;s Image&quot; - actually v little m&#39;l in Bible</li>
+<li>Genesis 1 - male and female both made in image of God. </li>
+<li>1:28 &quot;conquer it&quot; - subduing creation. To be balanced with being God&#39;s image/statue on earth. Recognising Sabbath is part of this being in God&#39;s image. Sharing a holiday with God, resting from relentless consumption.</li>
+</ul>
+</li>
+<li>J<ul>
+<li>Genesis 2 - woman made from man&#39;s rib. Mutuality and distinction.</li>
+</ul>
+</li>
+<li>Sudanese and East African cultures are far more used to having different stories preserved in different tribes and passed down, e.g. for creation.</li>
+<li>Flood story already existed with rainbow in Atrahasis epic (Mesopotamian). New thing in Bible is COVENANT.</li>
+<li><ul>
+<li>Pattern of creation, rupture and re-creation</li>
+</ul>
+</li>
+</ul>
+</aside></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### God
+
+What does this creation account tell us about God? What is God “up to” in this text?
+What one word would you use to describe God in this text?
+
+### Human beings
+
+What does this creation account teach us about human nature and God's relationship with us?
+
+What are the needs that human beings have, according to this passage, and what are the tasks given to human beings?
+
+In what ways are human beings like the other creatures, and in what ways are they different?
+
+### Today
+
+What does the creation narrative mean to you/us? Is there any impact or application today?
+Viewed through this creation account, who is God to me/us?  
+Viewed through this creation account, who am I/are we to God?
+</div></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Let's take a break!
+</div></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Covenant
+- THE main idea in the course
+> Exodus 6:2-9 - read thru
+- The "organising principle" that stops Old Testament being a junk-room
+- Covenants build on each-other - Noah, Abraham, Moses, David, New Covenant
+</div>
+
+<aside class="notes"><ul>
+<li>Testament - testamentum - diatheke - berit.</li>
+<li>New Covenant - Jer 31, Ezek 36</li>
+<li>Dysfunctional cupboard under the stairs. &quot;Covenant&quot; a BIG IDEA to bring everything together.</li>
+<li>A way to make kin, family out of not-kin, not-family.</li>
+<li>God is far away (transcendence) but we make God near (immanence)</li>
+<li>Nations make covenants with each-other, suzerains and vassals. For people who are <em>enemies</em>, not friends. A peace treaty, a solution to a problem.</li>
+<li>Covenant obedience also entails affirming creation&#39;s goodness and integrity.</li>
+</ul>
+</aside></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+We will split into groups and look at the following covenants: 
+
+1. Genesis 9:8–17 (Noah)
+
+2. Genesis 17:1–22 (Abraham)
+
+3. Deuteronomy 5 (Moses)
+
+4. 2 Samuel 7:12–17 (David)
+
+Think about the covenant assigned to your group. What is the good news in this covenant? Why do we need this covenant, and what would we be missing if we didn't have it? Who are the covenant partners? What promises are made, and what commitments are required in each agreement?
+</div></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Overflow Room
+We did not have enough time to discuss biblical law in detail in class. In your own time, think about the following questions:
+
+What typically comes to your mind when you think of “law” in the Old Testament? Do you have positive or negative associations? How has this lecture affected the way you think about the law in the Bible? 
+
+What does the word “law“ mean in the Scriptures?‌
+</div></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+In what respects has Christ fulfilled the law? In what respects does the law remain in effect? 
+
+Do Christians have to obey the Old Testament law?
+
+What is meant by “legalism”?
+
+Read Exodus 20:1–21 and Deuteronomy 5:6–21. Are the Ten Commandments to be obeyed today? How does the teaching of Jesus reflect the Ten Commandments?
+</div></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+If we cannot obey God’s law perfectly, why is our obedience still necessary? What are the benefits of obeying God’s law, even if imperfectly? 
+
+What role does the law have in preaching and in church services‌?
+</div></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/obsidian-markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/math/math.js"></script>
+    <script src="plugin/mermaid/mermaid.js"></script>
+    <script src="plugin/chart/chart.umd.js"></script>
+    <script src="plugin/chart/plugin.js"></script>
+    <script src="plugin/menu/menu.js"></script>
+    <script src="plugin/customcontrols/plugin.js"></script>
+
+
+    <script>
+        function extend() {
+            const target = {};
+            for (let i = 0; i < arguments.length; i++) {
+                const source = arguments[i];
+                for (const key in source) {
+                    if (source.hasOwnProperty(key)) {
+                        target[key] = source[key];
+                    }
+                }
+            }
+            return target;
+        }
+
+        function isLight(color) {
+            // normalize to rgb(a)
+            const optionEl = document.createElement("option");
+            optionEl.style.color = color;
+            const normalizedColor = optionEl.style.color;
+
+            const match = normalizedColor.match(/(\d+), (\d+), (\d+)/);
+            if (!match) return false;
+            const [, c_r, c_g, c_b] = match;
+
+            const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+            return brightness > 155;
+        }
+
+        const bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+
+        if (isLight(bgColor)) {
+            document.body.classList.add('has-light-background');
+        } else {
+            document.body.classList.add('has-dark-background');
+        }
+
+        // default options to init reveal.js
+        const defaultOptions = {
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            transition: 'default', // none/fade/slide/convex/concave/zoom
+            plugins: [
+                ObsidianMarkdown,
+                RevealHighlight,
+                RevealZoom,
+                RevealNotes,
+                RevealMath.KaTeX,
+                RevealMermaid,
+                RevealChart,
+                RevealCustomControls,
+                RevealMenu,
+            ],
+            allottedTime: "120",
+
+            katex: {
+                local: 'plugin/math/katex',
+                extensions: ["mhchem"],
+            },
+            markdown: {
+                gfm: true,
+            },
+            mermaid: {
+                theme: isLight(bgColor) ? 'default' : 'dark',
+            },
+            customcontrols: {
+                controls: [
+                ]
+            },
+            menu: {
+                loadIcons: false
+            },
+        };
+
+        if ( pageInIframe() ) {
+            defaultOptions.scrollActivationWidth = 5;
+        }
+
+        // options from URL query string
+        const queryOptions = Reveal().getQueryHash() || {};
+
+        const options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":false,"center":true,"transition":"slide","transitionSpeed":"default","width":960,"height":700,"margin":0.04}, queryOptions);
+    </script>
+
+    <script>
+      /**
+       * KaTeX Equation Numbering Note
+       *
+       * KaTeX maintains a global equation counter for \begin{equation} environments.
+       * When navigating between slides, reveal.js math plugin may re-render math, causing
+       * equation numbers to change randomly.
+       *
+       * Note: Regular $$ blocks don't have equation numbers - only \begin{equation} does.
+       *
+       * If you experience issues with equation numbers changing:
+       * Use manual \tag{} commands: \begin{equation}\tag{1} ... \end{equation}
+       */
+
+      Reveal.initialize(options);
+    </script>
+    <!-- created with Slides Extended reveal.html template -->
+</body>
+</html>
