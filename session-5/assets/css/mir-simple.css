@@ -362,3 +362,18 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
     background-color: var(--r-background-color);
   }
 }
+
+/* Font size */
+/* source https://forum.obsidian.md/t/text-size-in-notes-slides-and-advanced-slides/107337/4 */
+
+[data-callout="size-smaller"] { --my-font-size: 0.5em; }
+[data-callout="size-small"] { --my-font-size: 0.75em; }
+[data-callout="size-large"] { --my-font-size: 1.25em; }
+[data-callout="size-larger"] { --my-font-size: 1.5em; }
+
+[data-callout^="size-"] {
+	background-color: unset;
+	padding: 0;
+	.callout-title { display: none; }
+	font-size: var(--my-font-size);
+}

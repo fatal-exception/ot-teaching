@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="css/slides-extended.css" />
+    <link rel="stylesheet" href="assets/css/mir-simple.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+    <link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+    <script type="text/javascript">
+        function pageInIframe() {
+            return (window.location !== window.parent.location);
+        }
+
+        let forgetPop = true;
+        function onPopState(event) {
+            if(forgetPop){
+                forgetPop = false;
+            } else if( pageInIframe()) {
+                parent.postMessage(event.target.location.href, "app://obsidian.md");
+            }
+        }
+        window.onpopstate = onPopState;
+        window.onmessage = event => {
+            if(event.data == "reload"){
+                window.document.location.reload();
+            }
+            forgetPop = true;
+        }
+
+        function fitElements() {
+            const itemsToFit = document.getElementsByClassName('fitText');
+            for (const item in itemsToFit) {
+                if (Object.hasOwnProperty.call(itemsToFit, item)) {
+                    const element = itemsToFit[item];
+                    fitElement(element, 1, 1000);
+                    element.classList.remove('fitText');
+                }
+            }
+        }
+
+        function fitElement(element, start, end) {
+
+            let size = (end + start) / 2;
+            element.style.fontSize = `${size}px`;
+
+            if (Math.abs(start - end) < 1) {
+                while (element.scrollHeight > element.offsetHeight) {
+                    size--;
+                    element.style.fontSize = `${size}px`;
+                }
+                return;
+            }
+
+            if (element.scrollHeight > element.offsetHeight) {
+                fitElement(element, start, size);
+            } else {
+                fitElement(element, size, end);
+            }
+        }
+
+        document.onreadystatechange = () => {
+            fitElements();
+            if (document.readyState === 'complete') {
+                if (pageInIframe() && window.location.href.indexOf("?export") != -1){
+                    parent.postMessage(event.target.location.href, "app://obsidian.md");
+                }
+                if (window.location.href.indexOf("print-pdf") != -1){
+                    let stateCheck = setInterval(() => {
+                        clearInterval(stateCheck);
+                        window.print();
+                    }, 250);
+                }
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides"><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Warm up
+Burning questions about course so far?
+</div></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+Ellen Davis notes
+
+- Prophets like a time bomb. Harold Fisch "it awaits its hour and then springs forward into harsh remembrance."
+- Amos railing against injustices of war - speaks to his time and to ours
+- Hosea in North, Micah in South. Local farming yields to pressure of centralised government. People being stripped of ancestral allotments.
+- Micah was listened to by king Hezekiah, an example which also saved Jeremiah's life (Jer 26:18-19, Mic 3:12)
+- Envisages each sitting under own fig tree. Not just end of war, but end of systems of command/control and taxation that lead to war (Brueggemann) - "There will be no peace without a lowering of consumerism to match the banishment of arms".
+- Hosea - tension of Sinai covt vs Davidic covt. Child called "not-my-people", anti-covt.
+- Nahum - violence against cities portrayed as women, YHWH as full of wrath. A text that bears scars of warm-trauma and makes sense to people with their own war-trauma.
+- Jonah - a daring thought experiment about forgiveness and reconciliation for Niniveh. "Can we be sure who are God's enemies? Can we be sure that God has enemies at all?"
+</div></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Lecture notes
+- What does "prophetic" mean to you? What does it mean in our culture?
+- Is "prophecy" telling the future?
+> Deuteronomy 18:15-18 - read through
+- Divination - delivering divine knowledge to human beings
+- Technical divination vs intuitive (prophecy is the latter)
+	- Exs of technical divination in OT?
+- Prophecy - speech and sign-acts
+- Is prophecy public or private?
+- Divine council
+>1 Kings 22:19-20 - the Divine Council
+> Jer 23:18 - true prophet attends the divine council
+</div>
+
+<aside class="notes"><ul>
+<li>Prophecy is foretelling and forthtelling. What Israel HAS done, is doing and immediate future - &quot;turn or burn&quot;.</li>
+<li>Urim and Thummim, casting of lots</li>
+<li>&quot;Prophetic&quot; in Bible MUST mean connected to God, not just concerned about social causes.</li>
+</ul>
+</aside></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Prophetic signs 
+> 1 Kings 22:10-11 Zedekiah son of Chenaanah
+- Pre-Classical prophets vs classical prophets
+> 1 Samuel 9:6-10
+- Classical: pre-exilic, exilic, post-exilic
+- Apocalyptic prophets
+</div>
+
+<aside class="notes"><p>Pre-classical don&#39;t have books to their name. Moses Aaron, Miriam Deborah Samuel, Elijah Elisha etc.
+Classical
+Pre-exilic: Amos, Hosea
+Exilic: 2nd Isaiah, Jer, Ezek
+post-exilic: 3rd Isaiah, Malachi etc
+Classical prophets&#39; message comes to be linked to the enforcement of the covenant through the law.</p>
+<p>Apocalyptic: Daniel, Ezekiel 38-39 etc
+Daniel not addressed directly by God, doesn&#39;t give people a &quot;turning point&quot; where they can change their ways. Just tells them what&#39;s going to happen to them.</p>
+</aside></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Does Jesus fulfil the prophets?
+> 2 Samuel 7:12-13
+> Deuteronomy 18:15-18
+</div>
+
+<aside class="notes"><p>Jewish persp on Deut - God will continually raise up legitimate prophets to guide Israel</p>
+</aside></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+What does it mean for the church to be prophetic?
+
+- visionary
+- passionate for justice
+- provide direction
+
+Brueggemann: The prophetic tasks of the church are to *tell the truth* in a society that lives in *illusion*, *grieve* in a society that practices *denial*, and _express hope_ in a society that lives in _despair_.
+
+*Anguish* not *anger*. (Brueggemann, Rabbi Jonathan Sacks)
+</div></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+What are the issues with "speaking truth to power" ?
+</div>
+
+<aside class="notes"><p>Do we know that we&#39;re the good guys?
+Are we just whining to people who agree with us?
+Complexity in power relations.</p>
+</aside></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**1.** Do you have a favourite prophet? What is it about this prophet that fascinates you? Have you ever experienced the prophetic voice in your own life?
+
+**2.** Read the prophetic call narratives in Isaiah 6; Jeremiah 1; Ezekiel 1–3. What insights have you gained from these call narratives for your own ministry?
+</div></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Calling
+What can we learn from the prophetic call narratives in Isaiah 6; Jeremiah 1; Ezekiel 1–3?
+</div></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+4 Groups:
+
+**Resilience:** Isaiah 40. How does this text help us and our communities to survive and build our strength in adverse circumstances? How does this text cultivate resilience, individual and communal? What is this resilience rooted in?
+
+**Resistance:** Ezekiel 8. How does this text enable and equip us and our communities to resist and contest ideological distortions as well as harmful and unjust practices in our surrounding culture? How does this text from Ezekiel build our capacity for resistance?
+
+**Reformation** Jeremiah 7. The Prophets call for a radical transformation in our ways of thinking and radical change of our institutions, including religious and social structures, if they do not conform to the will of God. What does this chapter from Jeremiah have to say about reformation? How dies it resource us for it?
+
+**Rejoicing:** Zechariah 9. Human beings, individuals and communities, are sustained by joy. How does Zechariah promote and enable the practice of rejoicing? How does this text instil joy? What kind of joy is it?
+</div></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+Advanced materials!
+
+<img src="Pasted image 20260922135323.png" alt="" style="object-fit: scale-down">
+</div></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Thinking about the assignment
+</div></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/obsidian-markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/math/math.js"></script>
+    <script src="plugin/mermaid/mermaid.js"></script>
+    <script src="plugin/chart/chart.umd.js"></script>
+    <script src="plugin/chart/plugin.js"></script>
+    <script src="plugin/menu/menu.js"></script>
+    <script src="plugin/customcontrols/plugin.js"></script>
+
+
+    <script>
+        function extend() {
+            const target = {};
+            for (let i = 0; i < arguments.length; i++) {
+                const source = arguments[i];
+                for (const key in source) {
+                    if (source.hasOwnProperty(key)) {
+                        target[key] = source[key];
+                    }
+                }
+            }
+            return target;
+        }
+
+        function isLight(color) {
+            // normalize to rgb(a)
+            const optionEl = document.createElement("option");
+            optionEl.style.color = color;
+            const normalizedColor = optionEl.style.color;
+
+            const match = normalizedColor.match(/(\d+), (\d+), (\d+)/);
+            if (!match) return false;
+            const [, c_r, c_g, c_b] = match;
+
+            const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+            return brightness > 155;
+        }
+
+        const bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+
+        if (isLight(bgColor)) {
+            document.body.classList.add('has-light-background');
+        } else {
+            document.body.classList.add('has-dark-background');
+        }
+
+        // default options to init reveal.js
+        const defaultOptions = {
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            transition: 'default', // none/fade/slide/convex/concave/zoom
+            plugins: [
+                ObsidianMarkdown,
+                RevealHighlight,
+                RevealZoom,
+                RevealNotes,
+                RevealMath.KaTeX,
+                RevealMermaid,
+                RevealChart,
+                RevealCustomControls,
+                RevealMenu,
+            ],
+            allottedTime: "120",
+
+            katex: {
+                local: 'plugin/math/katex',
+                extensions: ["mhchem"],
+            },
+            markdown: {
+                gfm: true,
+            },
+            mermaid: {
+                theme: isLight(bgColor) ? 'default' : 'dark',
+            },
+            customcontrols: {
+                controls: [
+                ]
+            },
+            menu: {
+                loadIcons: false
+            },
+        };
+
+        if ( pageInIframe() ) {
+            defaultOptions.scrollActivationWidth = 5;
+        }
+
+        // options from URL query string
+        const queryOptions = Reveal().getQueryHash() || {};
+
+        const options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":false,"center":true,"transition":"slide","transitionSpeed":"default","width":960,"height":700,"margin":0.04}, queryOptions);
+    </script>
+
+    <script>
+      /**
+       * KaTeX Equation Numbering Note
+       *
+       * KaTeX maintains a global equation counter for \begin{equation} environments.
+       * When navigating between slides, reveal.js math plugin may re-render math, causing
+       * equation numbers to change randomly.
+       *
+       * Note: Regular $$ blocks don't have equation numbers - only \begin{equation} does.
+       *
+       * If you experience issues with equation numbers changing:
+       * Use manual \tag{} commands: \begin{equation}\tag{1} ... \end{equation}
+       */
+
+      Reveal.initialize(options);
+    </script>
+    <!-- created with Slides Extended reveal.html template -->
+</body>
+</html>
